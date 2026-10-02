@@ -1,0 +1,218 @@
+s1,12,20-------
+Q1. Create a dataframe containing information about different products such as Price, Rating, and
+Number of Sales. Generate a Dendrogram to group similar products based on their characteristics.
+Q2. Using the built-in Iris dataset, apply K-Means clustering with K = 3. Plot the datapoints, visualize
+the clusters with different colors, and display the cluster centroids.
+
+
+s2--------
+Q1. Write a Python program to create an age_records DataFrame containing the attributes Person_ID
+and Age for suitable sample records. Perform Data Discretization on the Age attribute using
+Equal Width Binning. Display the original and discretized data.
+
+[10 Marks]
+Q2. Apply Linear Regression on a YouTube Video dataset to predict video views using relevant video
+attributes. Visualize the relationship between the predictor and target variable using a scatter plot
+and regression line.
+
+
+
+s3--------
+Q1. Create a dataframe containing information about different vehicles such as Fuel_Efficiency,
+Engine_Power, Vehicle_Weight, Engine_Size, and Acceleration. Add 5 records in dataframe,
+including outlier. Create Box Plots for Fuel Efficiency and Engine Power and identify outliers.
+[10 Marks]
+Q2. Apply the Random Forest algorithm on the Heart Disease dataset to predict the presence of heart
+disease. Preprocess the data, evaluate the model using accuracy and confusion matrix.
+
+
+s4,s11--------
+Q1. A survey was conducted to determine the preferred payment method among customers as shown
+below:
+payment_methods = ["UPI", "Credit Card", "Debit Card", "Cash", "Net Banking"]
+customers = [150, 80, 60, 40, 30]
+Create a Pie Chart to represent the percentage of customers using each payment method. Display
+the percentage contribution of each category and add an appropriate title.
+
+Q2. Apply the K-Means Clustering algorithm on the given E-commerce Customer dataset. Read the
+dataset using Python, inspect and preprocess the data by handling missing values and selecting
+suitable numerical features. Apply K-Means clustering to segment the customers into different
+categories and interpret the resulting clusters.
+
+
+
+s5--------
+Q1. Write a Python program to create a customer_DataFrame with suitable attributes such as
+Customer_ID, Gender, City, and Membership_Type. Perform label encoding technique on
+appropriate categorical attributes. Display the DataFrame before and after encoding.
+
+[10 Marks]
+Q2. Generate a DataFrame containing customer information for Netflix and Amazon Prime users.
+Create a Venn diagram and a Pie chart to show the customers using only Netflix, only Amazon
+Prime, and both services. Add appropriate labels, colors, and titles to both visualizations.
+
+
+s6--------
+Q1. Create a DataFrame containing the car model, engine size (in litres), and fuel efficiency (in km/L)
+for the given cars. Create a scatter plot to visualize the relationship between engine size and
+fuel efficiency.Add an appropriate title, label both axes, and use different colors for the
+data points.
+
+Q2. Use the Sports Performance dataset to develop a Simple Linear Regression model to predict
+Performance Score based on Training Hours Per Week. Evaluate the model using the R2 score
+and plot a scatter graph with the regression line to visualize the relationship between training
+hours and performance score.
+
+
+
+s7--------
+Q1. Consider the following dataset representing the number of students enrolled in different courses:
+courses = ["BCA", "BBA", "B.Com", "B.Sc", "BA"]
+students = [60, 45, 75, 50, 35]
+Create a Bar Chart to visualize the number of students enrolled in each course. Use different bar
+colors, add an appropriate title, and label both axes.
+
+[10 Marks]
+Q2. Implement a KNN classifier on the given Student dataset. Preprocess the data and classify
+students into different performance categories. Evaluate the model using Accuracy and
+Confusion Matrix.
+
+
+s8--------
+
+Q1. Create a suitable dataset containing information about earthquakes using Latitude, Longitude,
+Depth, and Magnitude. Perform the following tasks:
+a. Create a Geospatial Visualization to display the locations of earthquakes on a map.
+b. Use color to represent the magnitude of each earthquake.
+Q2. Apply Simple Linear Regression on the Salary dataset to predict Salary using Years of
+Experience. Split the data into training and testing sets, plot the regression line, and evaluate the
+model using MSE.
+
+
+s9--------
+
+Q1. Write a Python program to create a product DataFrame with the attributes Product_ID, Price,
+Quantity_Sold, Discount, and Revenue. Apply Min-Max Scaling data transformation techniques
+on the DataFrame and display the transformed data.
+
+Q2. Create a dataset containing information about different books with the attributes Book Title,
+Author, Publication Year, Average Rating, and Number of Ratings.
+Perform the following tasks on created dataset:
+a. Create a Venn Diagram comparing the authors of books published in two different time
+periods.
+b. Generate a Word Cloud using the book titles.
+
+
+
+s10--------
+Q1. A company conducted a survey to determine the preferred mode of transportation among
+employees as shown below:
+transport = [“Train", "Bicycle", "Bike", "Car", "Bus"],
+employees = [220, 60, 70, 80, 40]
+Create a Pie Chart to represent the percentage of employees using each mode of transportation.
+Display the percentage contribution of each category. Give appropriate labels and colors.
+[10 Marks]
+Q2. Using the given housing dataset, develop a Random Forest Regression model to predict house
+prices based on the available property attributes. Perform the necessary data preprocessing, train
+and test the model, and evaluate its predictive performance using Mean Absolute Error (MAE),
+Root Mean Squared Error (RMSE), and R2 Score.
+
+
+
+s11--------
+Q1. An organization has recorded the number of employees working in different departments such as
+HR, Finance, IT, Sales, and Marketing. Write a Python program to create a bar chart showing the
+distribution of employees among these departments. Display suitable labels and a title.
+
+[10 Marks]
+Q2. Apply Logistic Regression to classify smartphones into different price categories using the given
+smartphone dataset. Preprocess the data appropriately and assess the model using Accuracy, F1-
+Score, and Confusion Matrix.
+
+
+
+s12--------
+
+Q1. Load the Titanic dataset (titanic.csv) Create a histogram showing the number of passengers in
+each passenger class. Create a Pie Chart showing the survival distribution.
+
+[10 Marks]
+Q2. Apply Polynomial Regression to predict song popularity using audio features such as
+danceability, energy, and tempo. Evaluate the model using MAE, RMSE, and R2 Score, and
+visualize the fitted curve.
+
+
+s13--------
+Q1. A retail store has recorded the daily sales for two months. Create a dataframe using sales.csv file
+and generate a Box Plot to identify any outliers. Customize the graph with title and labels.
+[10 Marks]
+Q2. Implement the K-Nearest Neighbors (KNN) algorithm to classify the Wine dataset. Perform the
+required data preprocessing, model training, and testing, and evaluate the model performance
+using Accuracy, Precision, Recall, and F1-Score.
+
+
+s14--------
+
+Q1. Create a dataframe containing information about different products such as Price, Rating, and
+Number of Sales. Generate a Dendrogram to group similar products based on their characteristics.
+[10 Marks]
+Q2. Using the Car Price Prediction dataset, apply Polynomial Regression to predict the Selling Price
+based on Vehicle Age, Present Price, and Kilometers Driven. Evaluate the model using the R2
+Score and visualize the actual data points along with the fitted polynomial curve.
+
+
+
+s15,s18--------
+Q1. Write a Python program to create an age_records DataFrame containing the attributes Person_ID
+and Age for suitable sample records. Perform Data Discretization on the Age attribute using
+Equal Frequency Binning. Display the original and discretized data.
+
+[10 Marks]
+Q2. Create a DataFrame containing information about different cities with the attributes City, Area
+(sq. km), Average Temperature (°C), Rainfall (mm), and Population Density. Generate a
+Treemap to visualize the population density of each city and create a 3D Scatter Plot using Area,
+Average Temperature, and Rainfall. Add suitable labels, colors, and titles to both visualizations.
+
+
+s16--------
+Q1. Create a DataFrame containing student performance data with attributes such as Study Hours,
+Attendance, Assignment Score, and Exam Score. Calculate the correlation matrix for these
+attributes and generate a Heat Map to visualize the correlation between them. Display the
+correlation values, suitable labels, and an appropriate title.
+
+[10 Marks]
+
+Q2. Write a Python program to create a DataFrame with the attributes Temperature, Humidity, Wind-
+Speed, Pressure, and Rainfall. Apply the following data transformation techniques and display
+
+the transformed data:
+a)Min-MaxScaling
+b)Standardization
+c) Normalization
+
+
+
+s17--------
+Q1. Write a Python program to create two DataFrames, student_details and academic_records,
+containing suitable student-related attributes. Perform data integration by combining the two
+DataFrames using a common attribute such as Student_ID. Display the individual DataFrames
+and the integrated DataFrame.
+
+[10 Marks]
+Q2. Create a dataset containing information about different cities with the attributes: City, Population,
+GDP, and Literacy Rate. Perform the following visualization tasks:
+a. Generate a Treemap showing city-wise population distribution.
+b. Create a 3D Scatter Plot using Population, GDP, and Literacy Rate.
+
+
+s19--------
+
+Q1. Write a Python program to create an employee_data DataFrame with the attributes: Emp_ID,
+Age, Dept, Years_Experience, and Performance_Rating. Perform data cleaning by handling
+missing values, remove duplicate records and detecting outliers using the IQR method.
+[10 Marks]
+Q2. Consider the World Cities dataset containing attributes - city, country, latitude, longitude, and
+population information. Perform the following tasks:
+a. Create a Geospatial Visualization showing the locations of cities on a world map, using
+marker size to represent population.
+b. Create a Treemap to visualize the population distribution of cities.
