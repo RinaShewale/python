@@ -14,35 +14,50 @@ plt.show()
 
 
 # S2_Q2_Student_KNN.py
-
 import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix
+from mlxtend.preprocessing import TransactionEncoder
+from mlxtend.frequent_patterns import apriori, association_rules
 
-df = pd.read_csv("Student.csv")
+transactions = [
+    ["Basmati Rice", "Toor Dal", "Turmeric Powder", "Cooking Oil"],
+    ["Atta", "Sugar", "Tea", "Milk"],
+    ["Rice", "Moong Dal", "Salt", "Cooking Oil"],
+    ["Wheat Flour", "Chickpeas", "Turmeric Powder", "Cumin Seeds"],
+    ["Poha", "Peanuts", "Onions", "Cooking Oil"],
+    ["Basmati Rice", "Paneer", "Garam Masala", "Tomatoes"],
+    ["Atta", "Potatoes", "Onions", "Cooking Oil"]
+]
 
-X = df[["Study_Hours", "Attendance"]]
-y = df["Performance"]
+print("Transactions:")
+print(transactions)
 
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
+te = TransactionEncoder()
+data = te.fit_transform(transactions)
 
-scaler = StandardScaler()
+df = pd.DataFrame(data, columns=te.columns_)
 
-X_train = scaler.fit_transform(X_train)
-X_test = scaler.transform(X_test)
+df = df.fillna(False)
 
-model = KNeighborsClassifier(n_neighbors=3)
+for support in [0.3, 0.4]:
 
-model.fit(X_train, y_train)
+    print("\nMinimum Support:", support)
 
-y_pred = model.predict(X_test)
+    items = apriori(df, min_support=support, use_colnames=True)
 
-accuracy = accuracy_score(y_test, y_pred)
+    print("\nFrequent Itemsets:")
+    print(items)
 
-print("Accuracy:", accuracy)
-print("Confusion Matrix:")
-print(confusion_matrix(y_test, y_pred))
+    rules = association_rules(
+        items,
+        metric="confidence",
+        min_threshold=0.5
+    )
+
+    print("\nAssociation Rules:")
+    print(rules[[
+        "antecedents",
+        "consequents",
+        "support",
+        "confidence",
+        "lift"
+    ]])

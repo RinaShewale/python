@@ -1,5 +1,4 @@
 # S1_Q1_Car.py
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -13,7 +12,8 @@ df = pd.DataFrame(data)
 
 print(df)
 
-plt.scatter(df["Engine Size"], df["Fuel Efficiency"], color="blue")
+plt.scatter(df["Engine Size"], df["Fuel Efficiency"],
+            color=["red", "blue", "green", "orange", "purple"])
 
 plt.title("Engine Size vs Fuel Efficiency")
 plt.xlabel("Engine Size (Litres)")
@@ -25,39 +25,30 @@ plt.show()
 
 
 
-
-
-# S1_Q2_Customer_KNN.py
-
-
+# S1_Q2_Training.py
 import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
 
-df = pd.read_csv("Customer.csv")
+df = pd.read_csv("Sports_Performance.csv")
 
-X = df[["Age", "Annual Income"]]
-y = df["Segment"]
+X = df[["Training Hours Per Week"]]
+y = df["Performance Score"]
 
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
+model = LinearRegression()
 
-scaler = StandardScaler()
+model.fit(X, y)
 
-X_train = scaler.fit_transform(X_train)
-X_test = scaler.transform(X_test)
+y_pred = model.predict(X)
 
-model = KNeighborsClassifier(n_neighbors=3)
+print("R2 Score:", r2_score(y, y_pred))
 
-model.fit(X_train, y_train)
+plt.scatter(X, y)
+plt.plot(X, y_pred)
 
-y_pred = model.predict(X_test)
+plt.title("Training Hours vs Performance Score")
+plt.xlabel("Training Hours Per Week")
+plt.ylabel("Performance Score")
 
-accuracy = accuracy_score(y_test, y_pred)
-
-print("Accuracy:", accuracy)
-print("Confusion Matrix:")
-print(confusion_matrix(y_test, y_pred))
+plt.show()
